@@ -29,11 +29,11 @@ python preprocess.py
 Please run ```./src/finetune.py``` to train the Finetune Baseline model:
 
 ```
-python finetune.py --tasks ag yelp yahoo --epochs 4 3 2   #Example for length-3 task sequence
-python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1   # Example for length-5 task sequence
+# Example for length-3 task sequence
+python finetune.py --tasks ag yelp yahoo --epochs 4 3 2   python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1   # Example for length-5 task sequence
 ```
 
-#### Naive 
+#### Naive Replay 
 
 Please run ```./src/naivereplay.py``` to train the Naive Replay Baseline model:
 
@@ -42,17 +42,28 @@ python naivereplay.py --tasks ag yelp yahoo --epochs 4 3 2   #Example for length
 python naivereplay.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 # Example for length-5 task sequence
 ```
 
-#### Regularization-only + Replay(0.01) + Kmeans for sample selection  
+#### Information-Disentanglement-Based-Regularization  
 
-Please run ```./src/train.py``` 
+Please run ```./src/train.py``` to train the IDBR model: 
 
+```
+#IDBR + kmeans for sample selection
+python train.py --tasks ag yelp yahoo --epochs 4 3 2 --disen True --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True
 
-#### Information-Disentanglement-Based-Regularization + Replay(0.01) + Kmeans for sample selection
+#Reg-only + kmeans for sample selection
+python train.py --tasks ag yelp yahoo --epochs 4 3 2 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
 
-#### Information-Disentanglement-Based-Regularization + Replay(0.01)  
+#IDBR + random sampling for sample selection
+python train.py --tasks ag yelp yahoo --epochs 4 3 2 --disen True --reg 1 --reggen 0.5 --regspe 0.5 
 
+#IDBR + store ratio=1 + kmeans for sample selection
+python train.py --tasks ag yelp yahoo --epochs 1 1 1 --disen True --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --store_ratio 1
+```
 
-#### Multitask Learning with Information Disentanglement 
+#### Multitask Learning 
 
+Please run ```./src/multitasklearning.py" to train the multitask-learning model:
 
-#### Multitask Learning without Information Disentanglement
+```
+
+```
