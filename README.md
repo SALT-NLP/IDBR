@@ -33,7 +33,8 @@ Please run ```./src/finetune.py``` to train the Finetune Baseline model:
 python finetune.py --tasks ag yelp yahoo --epochs 4 3 2   
 
 #Example for length-5 task sequence
-python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1   ```
+python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1   
+```
 
 #### Naive Replay 
 
