@@ -1,4 +1,4 @@
-#Information-Disentanglement-Based-Regularization(IDBR)
+# Information-Disentanglement-Based-Regularization(IDBR)
 
 This repo contains codes for the following paper:
 
