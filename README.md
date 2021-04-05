@@ -10,6 +10,13 @@ These instructions will get you running the codes of IDBR.
 
 ### Requirements
 
+- Python 3.8.5
+- Pytorch 1.4.0
+- transformers 3.5.1
+- tqdm, sklearn, numpy, pandas
+
+Detailed env is included in ```./package-list.txt```.
+
 ### Code Structure
 
 ### Downloading and Pre-processing the data
