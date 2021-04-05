@@ -1,9 +1,6 @@
 import torch
 import torch.nn as nn
 from transformers import BertModel, BertForPreTraining
-from transformers.modeling_bert import \
-    BertLMPredictionHead, BertPredictionHeadTransform, BertPreTrainingHeads
-from copy import deepcopy
 
 
 def get_tokens_id(x):

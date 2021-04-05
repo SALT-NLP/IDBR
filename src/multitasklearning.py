@@ -155,6 +155,7 @@ def train_step(model, optimizer, nsp_CR, cls_CR, x, mask, y, t,
     nsp_loss = torch.tensor(0.0).to(device)
 
     nsp_acc = 0.0
+    correct_task = 0.0
     if args.disen:
         #Calculate Next Sentence Prediction loss
         nsp_output = predictor(total_g_fea)
