@@ -2,7 +2,7 @@
 
 This repo contains codes for the following paper:
 
-*Yufan Huang <sup>+</sup>, Yanzhe Zhang <sup>+</sup>, Jiaao Chen, Xuezhi Wang, Diyi Yang*: Continual Learning for Text Classification with Information Disentanglement Based Regularization, NAACL2021. 
+*Yufan Huang <sup>\*</sup>, Yanzhe Zhang <sup>\*</sup>, Jiaao Chen, Xuezhi Wang, Diyi Yang*: Continual Learning for Text Classification with Information Disentanglement Based Regularization, NAACL2021. 
 
 If you would like to refer to it, please cite the paper mentioned above.
 
