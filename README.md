@@ -18,6 +18,24 @@ These instructions will get you running the codes of IDBR.
 Detailed env is included in ```./package-list.txt```.
 
 ### Code Structure
+```
+|_src/
+      |_read_data.py --> Codes for reading and processing datasets
+      |_preprocess.py --> Preprocess datasets
+      |_model.py --> Codes for baseline and IDBR model
+      |_finetune.py --> Codes for finetune Baseline
+      |_naivereplay.py --> Codes for naivereplay Baseline
+      |_multitasklearning.py --> Codes for multitasklearning Baseline
+      |_train.py --> Codes for IDBR
+|_data/
+      |_ag/
+      |_amazon/
+      |_dbpedia/
+      |_yelp/
+      |_yahoo/
+      |_data/
+```
+All folders under ```./data``` will be generated automatically in the "Downloading and Pre-processing the data" step.  
 
 ### Downloading and Pre-processing the data
 
@@ -75,8 +93,12 @@ python train.py --tasks ag yelp yahoo --epochs 1 1 1 --disen True --reg 1 --regg
 
 #### Multitask Learning 
 
-Please run ```./src/multitasklearning.py" to train the multitask-learning model:
+Please run ```./src/multitasklearning.py``` to train the multitask-learning model:
 
 ```
+#Multitask Learning w. Information Disentanglement
+python multitasklearning.py --tasks ag yelp yahoo --disen True
 
+#Multitask Learning w/o Information Disentanglement
+python multitasklearning.py --tasks ag yelp yahoo
 ```
