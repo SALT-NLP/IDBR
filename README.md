@@ -44,6 +44,7 @@ All folders under ```./data``` will be generated automatically in the "Downloadi
 We used the data provided by LAMOL. You can find the data from [link to data](https://drive.google.com/file/d/1rWcgnVcNpwxmBI3c5ovNx-E8XKOEL77S/view). Please download it and put it into the data folder. Then uncompress and pre-process the data:
 
 ```
+mkdir data
 cd ./data
 tar -xvzf LAMOL.tar.gz
 cd ../src
