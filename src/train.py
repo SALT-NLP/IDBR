@@ -44,12 +44,12 @@ parser.add_argument("--reg", type=bool, default=False,
                     help='Apply Regularization or Not')
 parser.add_argument("--regcoe", type=float, default=0.5,
                     help='Regularization Coefficient when not replaying')
-parser.add_argument("--reggen", type=float, default=1.0,
-                    help='Regularization Coefficient on General Space')
-parser.add_argument("--regspe", type=float, default=1.0,
-                    help='Regularization Coefficient on Specific Space')
 parser.add_argument("--regcoe_rply", type=float, default=5.0,
                     help='Regularization Coefficient when replaying')
+parser.add_argument("--reggen", type=float, default=0.5,
+                    help='Regularization Coefficient on General Space')
+parser.add_argument("--regspe", type=float, default=0.5,
+                    help='Regularization Coefficient on Specific Space')
 parser.add_argument("--store_ratio", type=float, default=0.01,
                     help='how many samples to store for replaying')
 parser.add_argument('--tasks', nargs='+', type=str,
