@@ -51,7 +51,9 @@ python preprocess.py
 ```
 ### Training models in Setting (Sampled)
 
-Note that in the following exps, default epoch number is 4, we may prune it to a smaller number due to certain task is easy to overfit.
+Note that in the following exps, default epoch numbers should be set to 4. 
+
+We prune some of them to a smaller number due to certain tasks are easy to overfit.
 
 #### Finetune 
 
@@ -92,6 +94,7 @@ python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 
 #### Information-Disentanglement-Based-Regularization  
 
 While we set reggen to 0.5, we select best regspe from {0.3, 0.4, 0.5}.
+
 We use ```./src/train.py``` to train the IDBR model: 
 
 ```
