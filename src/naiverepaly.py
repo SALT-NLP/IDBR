@@ -6,18 +6,26 @@ DATA_DIR = '../data'
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--seed", type=int, default=0)
-parser.add_argument("--epochs", nargs='+', type=int, default=[10, 10, 10, 10, 10])
-parser.add_argument("--batch_size", type=int, default=8)
-parser.add_argument("--bert_learning_rate", type=float, default=3e-5)
-parser.add_argument("--learning_rate", type=float, default=3e-5)
+parser.add_argument("--epochs", nargs='+', type=int,
+                    default=[10, 10, 10, 10, 10],
+                    help='Epoch number for each task')
+parser.add_argument("--batch_size", type=int, default=8,
+                    help='training batch size')
+parser.add_argument("--bert_learning_rate", type=float, default=3e-5,
+                    help='learning rate for pretrained Bert')
+parser.add_argument("--learning_rate", type=float, default=3e-5,
+                    help='learning rate for Class Classifier')
 
 # 0822 1628 -- increase latent size, use tsne
-parser.add_argument("--replay_freq", type=int, default=10)
+parser.add_argument("--replay_freq", type=int, default=10,
+                    help='frequency of replaying, i.e. replay one batch from memory'
+                         ' every replay_freq batches')
 parser.add_argument('--gpu', default='0', type=str,
                     help='id(s) for CUDA_VISIBLE_DEVICES')
 parser.add_argument('--n-labeled', type=int, default=2000,
                     help='Number of labeled data')
-parser.add_argument("--store_ratio", type=float, default=0.01)
+parser.add_argument("--store_ratio", type=float, default=0.01,
+                    help='how many samples to store for replaying')
 parser.add_argument('--tasks', nargs='+', type=str,
                     default=['ag', 'yelp', 'amazon', 'yahoo', 'dbpedia'], help='Task Sequence')
 

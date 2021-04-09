@@ -7,10 +7,14 @@ DATA_DIR = '../data'
 parser = argparse.ArgumentParser()
 parser.add_argument("--seed", type=int, default=0)
 parser.add_argument("--epochs", nargs='+', type=int,
-                    default=[10, 10, 10, 10, 10])
-parser.add_argument("--batch_size", type=int, default=8)
-parser.add_argument("--bert_learning_rate", type=float, default=3e-5)
-parser.add_argument("--learning_rate", type=float, default=3e-5)
+                    default=[10, 10, 10, 10, 10],
+                    help='Epoch number for each task')
+parser.add_argument("--batch_size", type=int, default=8,
+                    help='training batch size')
+parser.add_argument("--bert_learning_rate", type=float, default=3e-5,
+                    help='learning rate for pretrained Bert')
+parser.add_argument("--learning_rate", type=float, default=3e-5,
+                    help='learning rate for Class Classifier')
 parser.add_argument('--gpu', default='0', type=str,
                     help='id(s) for CUDA_VISIBLE_DEVICES')
 parser.add_argument('--n-labeled', type=int, default=2000,
