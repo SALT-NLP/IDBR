@@ -60,10 +60,10 @@ We prune some of them to a smaller number due to certain tasks are easy to overf
 We use ```./src/finetune.py``` to train the Finetune Baseline model:
 
 ```
-#Example for length-3 task sequence
+# Example for length-3 task sequence
 python finetune.py --tasks ag yelp yahoo --epochs 4 3 2   
 
-#Example for length-5 task sequence
+# Example for length-5 task sequence
 python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1   
 ```
 
@@ -72,10 +72,10 @@ python finetune.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1
 We use ```./src/naivereplay.py``` to train the Naive Replay Baseline model:
 
 ```
-#Example for length-3 task sequence
+# Example for length-3 task sequence
 python naivereplay.py --tasks ag yelp yahoo --epochs 4 3 2   
 
-#Example for length-5 task sequence
+# Example for length-5 task sequence
 python naivereplay.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1
 ```
 
@@ -84,10 +84,10 @@ python naivereplay.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1
 We use ```./src/train.py``` to train the Regularization Baseline model: 
 
 ```
-#Example for length-3 task sequence
+# Example for length-3 task sequence
 python train.py --tasks ag yelp yahoo --epochs 4 3 2 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
 
-#Example for length-5 task sequence
+# Example for length-5 task sequence
 python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
 ```
 
@@ -98,11 +98,11 @@ While we set reggen to 0.5, we select best regspe from {0.3, 0.4, 0.5}.
 We use ```./src/train.py``` to train the IDBR model: 
 
 ```
-#Example for length-3 task sequence
+# Example for length-3 task sequence
 python train.py --tasks ag yelp yahoo --epochs 4 3 2 --disen True --reg 1 --reggen 0.5 --regspe 0.3 --kmeans True
 
 
-#Example for length-5 task sequence
+# Example for length-5 task sequence
 python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 --reggen 0.5 --regspe 0.3 --kmeans True
 ```
 
@@ -111,7 +111,7 @@ python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 
 We use ```./src/multitasklearning.py``` to train the multitask-learning model:
 
 ```
-#Multitask Learning w/o Information Disentanglement
+# Multitask Learning
 python multitasklearning.py --tasks ag yelp yahoo
 ```
 
