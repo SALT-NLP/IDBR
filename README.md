@@ -126,4 +126,4 @@ python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 1 1 1 1 1 --reg 1 
 
 ## Questions
 
-If you have any questions, please contact Yanzhe Zhang via z_yanzhe AT zju.edu.cn
+If you have any questions, please contact Yanzhe Zhang via z_yanzhe AT gatech.edu
