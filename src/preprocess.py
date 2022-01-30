@@ -32,8 +32,11 @@ def preprocess(dataset_name, mode):
             contexts.append(context)
             questions.append(question)
             answers.append(answer)
-
-        answers_id = cls_name2id(answers, dataset_name)
+        if dataset_name != 'amazon':
+            answers_id = cls_name2id(answers, dataset_name)
+        else:
+            # reuse the label id from yelp to strictly align
+            answers_id = cls_name2id(answers, 'yelp')
     data = {'answers'   : answers_id,
             'questions' : questions,
             'contexts'  : contexts}
