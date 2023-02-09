@@ -86,10 +86,10 @@ We use ```./src/train.py``` to train the Regularization Baseline model:
 
 ```
 # Example for length-3 task sequence
-python train.py --tasks ag yelp yahoo --epochs 4 3 2 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
+python train.py --tasks ag yelp yahoo --epochs 4 3 2 --reg True --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
 
 # Example for length-5 task sequence
-python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
+python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg True --reggen 0.5 --regspe 0.5 --kmeans True --tskcoe 0.0
 ```
 
 #### Information-Disentanglement-Based-Regularization  
@@ -100,11 +100,11 @@ We use ```./src/train.py``` to train the IDBR model:
 
 ```
 # Example for length-3 task sequence
-python train.py --tasks ag yelp yahoo --epochs 4 3 2 --disen True --reg 1 --reggen 0.5 --regspe 0.3 --kmeans True
+python train.py --tasks ag yelp yahoo --epochs 4 3 2 --disen True --reg True --reggen 0.5 --regspe 0.3 --kmeans True
 
 
 # Example for length-5 task sequence
-python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --reg 1 --reggen 0.5 --regspe 0.3 --kmeans True
+python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 4 3 3 2 1 --disen True --reg True --reggen 0.5 --regspe 0.3 --kmeans True
 ```
 
 #### Multitask Learning 
@@ -121,7 +121,7 @@ python multitasklearning.py --tasks ag yelp yahoo
 We use ```./src/train.py``` to train the IDBR model: 
 
 ```
-python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 1 1 1 1 1 --reg 1 --reggen 0.5 --regspe 0.5 --kmeans True --n-labeled -1 --n-val 500
+python train.py --tasks ag yelp amazon yahoo dbpedia --epochs 1 1 1 1 1 --disen True --reg True --reggen 0.5 --regspe 0.5 --kmeans True --n-labeled -1 --n-val 500
 ```
 
 ## Questions
